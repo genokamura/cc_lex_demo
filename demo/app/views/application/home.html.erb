@@ -1,0 +1,70 @@
+<div class="top-cate">
+  <div class="featured-pro container">
+    <div class="row">
+      <div class="slider-items-products">
+        <div class="new_title">
+          <h2><a href="/" style="color:white;">１．サイズを選ぶ</h2>
+        </div>
+        <div id="top-categories" class="product-flexslider hidden-buttons">
+          <div class="slider-items slider-width-col4 products-grid">
+  
+            <% for val in @weightList do %>
+            <div class="item">
+              <div class="pro-img"><%= image_tag val.getId + ".png" %>
+                <div class="pro-info"><%= val.getWeight %>グラム</div>
+                <div class="pro-info">¥ <%= val.getPrice %></div>
+              </div>
+            </div>
+            <% end %>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="featured-pro container">
+    <div class="row">
+      <div class="slider-items-products">
+        <div class="new_title">
+          <h2><a href="/" style="color:white;">２．焼き加減を選ぶ</h2>
+        </div>
+        <div id="top-categories" class="product-flexslider hidden-buttons">
+          <div class="slider-items slider-width-col4 products-grid">
+    
+            <% for val in @steakList do %>
+            <div class="item">
+              <div class="pro-img"><%= image_tag val.getId.to_s + ".png" %>
+                <div class="pro-info"><%= val.getSteak %></div>
+              </div>
+            </div>
+            <% end %>
+    
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="<%= @loaderScript %>"></script>
+<script>
+  var loaderOpts = {
+    baseUrl: "<%= @baseUrl %>",
+    shouldLoadMinDeps: true
+  };
+  var loader = new ChatBotUiLoader.IframeLoader(loaderOpts);
+  var chatbotUiConfig = {
+          /* Example of setting session attributes on parent page
+          lex: {
+            sessionAttributes: {
+              userAgent: navigator.userAgent,
+              QNAClientFilter: ''
+            }
+          }
+          */
+        };
+  loader.load(chatbotUiConfig)
+    .catch(function (error) { console.error(error); });
+</script>
