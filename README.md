@@ -6,11 +6,7 @@ Amazon Lex の機能を紹介するデモ。
 
 ## 利用方法
 
-### １．事前準備
-
-- Amazon Lex で利用するデータセットのスキーマは`./schema.json`にて以下の通り定義されている。
-
-## ２．Amazon Lex に新たなボットを作成する
+## 1．Amazon Lex に新たなボットを作成する
 
 1. コンソールにサインイン
 2. Amazon Lex ダッシュボードにアクセス
@@ -20,7 +16,7 @@ Amazon Lex の機能を紹介するデモ。
 6. [こちら](https://aws.amazon.com/jp/blogs/machine-learning/deploy-a-web-ui-for-your-chatbot/)のリンクの手順に従い、構築した Chatbot をデプロイ
 7. 完了
 
-## ３．Demo アプリケーションからチャット注文を利用する
+## 2．Demo アプリケーションからチャット注文を利用する
 
 ### デモアプリケーションの動作環境
 
